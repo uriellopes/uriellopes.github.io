@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bem vindo!</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .conteudo {
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            display: grid;
+            grid-template-columns: auto;
+        }
+        .conteudo h1{
+            text-align: center;
+            line-height: 100px;
+        }
+        #show {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>FALTAM</h1>
+        <h1 id="show"></h1>
+        <h1>PARA O FIM DO SEMESTRE</h1>
+    </div>
+</body>
+
+<script>
+    var hoje = new Date(); 
+    var fim = new Date("07/04/2020");
+    var diferenca_tempo = Math.abs(fim.getTime() - hoje.getTime());
+    var diferenca_dias = Math.ceil(diferenca_tempo/(1000 * 3600 * 24));
+    document.getElementById("show").innerHTML = diferenca_dias + " DIAS";
+</script>
+
+</html>
