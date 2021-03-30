@@ -36,6 +36,8 @@
             <input id="preco" type="number" value="">
             <br>
             <button @click="adicionar">Adicionar</button>
+            <button @click="resetar">Reset</button>
+            <button @click="printPDF">Salvar PDF</button>
             <br>
             <table style="text-align: center; border: 1px solid black;">
                     <tr>
@@ -516,6 +518,19 @@
                 },
                 convertDesconto: function(p) {
                     return p.toFixed(2);
+                },
+                resetar: function() {
+                    this.gabinetes = [],
+                    this.processadores = [],
+                    this.rams = [],
+                    this.vgas = [],
+                    this.mobos = [],
+                    this.fontes = [],
+                    this.total = [0, 0, 0, 0, 0, 0],
+                    this.produtos = [];
+                },
+                printPDF: function() {
+                    print();
                 }
             }
         })
