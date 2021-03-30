@@ -477,7 +477,7 @@
 
                     if( tipo == 3 ) {
                         const quantidade = document.getElementById("quantidade_produto").value;
-                        var produto = {tipo: tipo, nome: nome, preco: preco, quantidade: quantidade};
+                        var produto = {tipo: tipo, nome: nome, preco: preco*quantidade, quantidade: quantidade};
                     } else {
                         var produto = {tipo: tipo, nome: nome, preco: preco, quantidade: 1};
                     }
